@@ -1,0 +1,23 @@
+<h1>Lista de compras</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Estoque mínimo</th>
+      <th>Estoque atual</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.minimum_stock %></td>
+        <td><%= product.stock %></td>
+        <td><%= link_to 'Entrada', new_transaction_path(product_id: product.id, transaction_type: 'entrada'), class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

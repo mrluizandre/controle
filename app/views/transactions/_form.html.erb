@@ -1,0 +1,16 @@
+
+<%= simple_form_for(@transaction) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :transaction_type, collection: Transaction.transaction_types.keys.map{|t| [t.titleize, t]}, selected: params[:transaction_type], include_blank: true %>
+    <%= f.association :product, selected: params[:product_id], include_blank: true %>
+    <%= f.input :amount %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+<% end %>
+

@@ -1,0 +1,20 @@
+<h1>Lista de compras de mantimentos abaixo do estoque mínimo</h1>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<%= @products.each do |product| %>
+			<tr>
+				<td><%= product.name %></td>
+				<td><%= product.minimum_stock %></td>
+				<td><%= product.stock %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
