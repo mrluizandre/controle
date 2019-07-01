@@ -1,24 +1,23 @@
-# README
+# Controle de mantimentos
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Versão 1.0
 
-Things you may want to cover:
+Esse software foi desenvolvido para o controle de mantimentos para a disciplina de Engenharia de Software
 
-* Ruby version
+# Caracteristicas:
 
-* System dependencies
+* Cadastro dos produtos
 
-* Configuration
+* Registro de Entrada e Saída de estoque
 
-* Database creation
+* Gera lista de compras
 
-* Database initialization
+* Envia e-mail de lista de compras baseado na periodicidade definida pelo usuário
 
-* How to run the test suite
+# Dependências
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby 2.6.3
 
-* Deployment instructions
+* Rails 5.2.2
 
-* ...
+* Banco de dados PostgreSQL
