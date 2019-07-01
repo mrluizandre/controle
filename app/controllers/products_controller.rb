@@ -11,6 +11,11 @@ class ProductsController < ApplicationController
     @products = Product.where("stock <= minimum_stock")
   end
 
+  def send_to_buy
+    NotifierMailer.below_minimum_stock.deliver
+    redirect_to to_buy_products_path, notice: 'Lista enviada com sucesso'
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
