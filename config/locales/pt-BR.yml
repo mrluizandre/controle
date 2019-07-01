@@ -4,6 +4,7 @@ pt-BR:
     models:
       product: Produto
       transaction: Transação
+      setting: Configuração
     attributes:
       product:
         name: Nome
@@ -13,6 +14,8 @@ pt-BR:
         transaction_type: Tipo
         product: Produto
         amount: Quantidade
+      setting:
+        when_send_notification: Periodicidade da notificação
 
     errors:
       messages:
